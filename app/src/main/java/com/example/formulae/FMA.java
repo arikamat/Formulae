@@ -4,7 +4,7 @@ public class FMA {
     private int cases;
     //if try to find a case=3
     // if try find m case =2
-    // if try to find case 1
+    // if try to find case =1
     private double f;
     private double m;
     private double a;
