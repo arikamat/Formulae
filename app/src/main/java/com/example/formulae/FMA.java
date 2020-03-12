@@ -31,9 +31,11 @@ public class FMA {
             force = mass*acceleration;
         }
         else if(cases==2){
+            //User is looking for Mass
             mass = acceleration/force;
         }
         else{
+            //User is looking for acceleration
             acceleration = force/mass;
         }
     }
