@@ -42,6 +42,10 @@ public class Displacement {
             returnedVal[0]= getVelInit();
             return returnedVal;
         }
+        else if(find.toLowerCase().equals("displacement")){
+            returnedVal[0]=getDisplacement();
+            return returnedVal;
+        }
         else{
             returnedVal[0]= getAcceleration();
             return returnedVal;
@@ -77,9 +81,59 @@ public class Displacement {
 
     public double getVelInit(){
         //if(displacementB)
-        return 0;
+        if(velFinalB&&timeB&&displacementB){
+            return ((2*displacement)/time)-velFinal;
+        }
+        else if(displacementB&&timeB&&accelerationB){
+            return (2*displacement)-(acceleration*Math.pow(time,2))/(2*time);
+
+        }
+        else{
+            if(displacementB&&velFinalB&&accelerationB){
+                double insideSqrt= (Math.pow(velFinal,2)-(2*acceleration*displacement));
+                if(insideSqrt>=0){
+                    return Math.sqrt(insideSqrt);
+                }
+                else{
+                    return 0;
+                }
+            }
+            return 0;
+        }
+
     }
     public double getAcceleration(){
         return 0;
+    }
+    public double getDisplacement(){
+        if(velFinalB&&velInitB&&timeB){
+            return ((velFinal+velInit)*time)/2;
+        }
+        else if(velInitB&&timeB&&accelerationB){
+            return ((velInit*time)+((acceleration*Math.pow(time,2))/2));
+        }
+        else if(velFinalB&&velInitB&&accelerationB){
+            return (Math.pow(velFinal,2)-Math.pow(velInit,2))/(2*acceleration);
+        }
+        else{
+            return 0;
+        }
+    }
+    public double getVelFinal(){
+        if(displacementB&&velInitB&&timeB){
+            return ((2*displacement)/time)-velInit;
+        }
+        else if(displacementB&&velInitB&&accelerationB){
+            double insideSqrt = (2*acceleration*displacement)+Math.pow(velInit,2);
+            if(insideSqrt>=0){
+                return Math.sqrt(insideSqrt);
+            }
+            else{
+                return 0;
+            }
+        }
+        else{
+            return 0;
+        }
     }
 }
