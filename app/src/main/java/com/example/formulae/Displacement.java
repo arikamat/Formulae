@@ -75,8 +75,11 @@ public class Displacement {
         }
     }
 
-    /*public double getVelInit(){
-        if(displacementB)
-
-    }*/
+    public double getVelInit(){
+        //if(displacementB)
+        return 0;
+    }
+    public double getAcceleration(){
+        return 0;
+    }
 }
