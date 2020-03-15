@@ -39,7 +39,7 @@ public class FreeFall<booelan> {
         this.timemaxhB = true;
     }
 
-    public double[] find(String find){
+    public double find(String find){
         double[] returnedVal = new double[2];
         if(find.toLowerCase().equals("initial velocity")){
             returnedVal[0]=getInitVel();
