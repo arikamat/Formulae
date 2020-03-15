@@ -1,4 +1,4 @@
-package com.example.formulae;
+package com.example.formulae.physics;
 
 public class FMA {
     private double  acceleration, mass, force;

@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.formulae.physics.ConstantAcceleration;
+import com.example.formulae.physics.Displacement;
+import com.example.formulae.physics.FMA;
+
 public class MainActivity extends AppCompatActivity {
     private static Displacement displacement;
     private static ConstantAcceleration constAccel;
