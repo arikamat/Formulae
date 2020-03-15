@@ -24,20 +24,20 @@ public class FMA {
         accelerationB=true;
     }
 
-    public double[] find(String find){
-        double[] returnedVal = new double[2];
+    public double find(String find){
+        double returnedVal;
         if(find.toLowerCase().equals("mass")){
-            returnedVal[0]=getMass();
+            returnedVal=getMass();
             return returnedVal;
         }
 
         else if(find.toLowerCase().equals("force")){
-            returnedVal[0]= getForce();
+            returnedVal= getForce();
             return returnedVal;
         }
 
         else{
-            returnedVal[0]= getAcceleration();
+            returnedVal= getAcceleration();
             return returnedVal;
         }
     }
