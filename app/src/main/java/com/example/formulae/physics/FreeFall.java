@@ -1,4 +1,4 @@
-package com.example.formulae;
+package com.example.formulae.physics;
 
 public class FreeFall<booelan> {
 
@@ -39,10 +39,10 @@ public class FreeFall<booelan> {
         this.timemaxhB = true;
     }
 
-    public double[] find(String find){
-        double[] returnedVal = new double[2];
+    public double find(String find){
+        double returnedVal;
         if(find.toLowerCase().equals("initial velocity")){
-            returnedVal[0]=getInitVel();
+            returnedVal=getInitVel();
             return returnedVal;
         }
         else if(find.toLowerCase().equals("time")){
@@ -50,15 +50,15 @@ public class FreeFall<booelan> {
             return returnedVal;
         }
         else if(find.toLowerCase().equals("final velocity")){
-            returnedVal[0]= getFinVel();
+            returnedVal= getFinVel();
             return returnedVal;
         }
         else if(find.toLowerCase().equals("time to max height")){
-            returnedVal[0]=getTimemaxh();
+            returnedVal=getTimemaxh();
             return returnedVal;
         }
         else{
-            returnedVal[0]= getMaxh();
+            returnedVal= getMaxh();
             return returnedVal;
         }
     }
