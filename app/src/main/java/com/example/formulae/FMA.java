@@ -44,8 +44,17 @@ public class FMA {
 
 
     public double getAcceleration(){
-
+        return (force / mass);
     }
+
+    public double getMass(){
+        return (force / acceleration);
+    }
+
+    public double getForce(){
+        return (acceleration * mass);
+    }
+
 
 }
 
