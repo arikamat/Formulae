@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-    private VGT freefall;
-    private FMA fma;
+    private Displacement displacement;
+    private ConstantAcceleration constAccel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
