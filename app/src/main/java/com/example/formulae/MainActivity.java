@@ -5,8 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-    private Displacement displacement;
-    private ConstantAcceleration constAccel;
+    private static Displacement displacement;
+    private static ConstantAcceleration constAccel;
+    private static FMA fma;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
