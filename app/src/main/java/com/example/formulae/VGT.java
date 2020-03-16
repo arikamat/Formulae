@@ -20,6 +20,7 @@ public class VGT {
                 time = velocity/gravity;
         }
     }
+
     public VGT(double v, double t, double g, String find){
         //Constructor for other places
         velocity=v;
@@ -35,6 +36,7 @@ public class VGT {
                 time = velocity/gravity;
         }
     }
+
     public double getVelocity(){
         return velocity;
     }
