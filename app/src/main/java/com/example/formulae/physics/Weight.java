@@ -25,7 +25,7 @@ public class Weight {
             return returnedVal;
         }
 
-        else (find.toLowerCase().equals("weight")){
+        else {
             returnedVal= getWeight();
             return returnedVal;
         }
