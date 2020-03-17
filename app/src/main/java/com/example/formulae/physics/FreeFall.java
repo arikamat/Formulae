@@ -76,7 +76,7 @@ public class FreeFall {
             }
         }
         else if (timeMaxHB){
-            return (time * 9.8);
+            return (time * gravity);
         }
         else{
             return 0;
