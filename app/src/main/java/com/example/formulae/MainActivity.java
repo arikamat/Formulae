@@ -14,6 +14,7 @@ import com.example.formulae.physics.FMA;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private static Displacement displacement;
     private static ConstantAcceleration constAccel;
     private static FMA fma;
