@@ -1,4 +1,4 @@
-package com.example.formulae;
+package com.example.formulae.physics;
 
 import static java.lang.Double.NaN;
 
@@ -69,4 +69,5 @@ public class ConstantAcceleration {
             return NaN;
         }
     }
+
 }
