@@ -1,4 +1,4 @@
-package com.example.formulae.physics;
+package com.example.formulae.physicsBack;
 
 public class Displacement {
     private double time, acceleration, velFinal, velInit, displacement;

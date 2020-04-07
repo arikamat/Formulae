@@ -1,4 +1,4 @@
-package com.example.formulae.physics;
+package com.example.formulae.physicsBack;
 
 public class Weight {
     private double mass, weight;

@@ -1,4 +1,4 @@
-package com.example.formulae.physics;
+package com.example.formulae.physicsBack;
 
 public class KineticEnergy {
     private double kinetic, mass, velocity;
@@ -25,8 +25,9 @@ public class KineticEnergy {
     public double find(String find){
         double returnedVal;
         if(find.toLowerCase().equals("velocity")){
-            returnedVal=getVelocity();
-            return returnedVal;
+            //returnedVal=getVelocity();
+            //return returnedVal;
+            return 0;
         }
 
         else if(find.toLowerCase().equals("mass")){
@@ -48,9 +49,9 @@ public class KineticEnergy {
         return ((2 * kinetic) / velocity * velocity);
     }
 
-    public double getVelocity(){
+   /* public double getVelocity(){
         return ();
-    }
+    }*/
 
 
 }

@@ -1,20 +1,15 @@
 package com.example.formulae;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Point;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 
-import com.example.formulae.physics.ConstantAcceleration;
-import com.example.formulae.physics.Displacement;
-import com.example.formulae.physics.FMA;
+import com.example.formulae.physicsBack.ConstantAcceleration;
+import com.example.formulae.physicsBack.Displacement;
+import com.example.formulae.physicsBack.FMA;
+import com.example.formulae.physicsFront.Physics1;
 
 public class MainActivity extends Activity implements View.OnClickListener {
     private Button physicsBtn;
@@ -36,7 +31,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.physicsbtn:
-                Intent intent=new Intent(getApplicationContext(),Physics1.class);
+                Intent intent=new Intent(getApplicationContext(), Physics1.class);
                 startActivityForResult(intent,0);
                 break;
             case R.id.chembtn:

@@ -1,4 +1,4 @@
-package com.example.formulae.physics;
+package com.example.formulae.physicsBack;
 
 public class Collisions {
     private double velOb1Init, velOb1Final;

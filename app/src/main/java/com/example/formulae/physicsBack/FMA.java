@@ -1,4 +1,4 @@
-package com.example.formulae.physics;
+package com.example.formulae.physicsBack;
 
 public class FMA {
     private double  acceleration, mass, force;
@@ -7,7 +7,8 @@ public class FMA {
     private boolean accelerationB=false;
     private boolean massB = false;
     private boolean forceB = false;
-
+    public FMA(){
+    }
 
     public void setMass(double mass){
         this.mass =mass;
@@ -54,7 +55,4 @@ public class FMA {
     public double getForce(){
         return (acceleration * mass);
     }
-
-
 }
-
