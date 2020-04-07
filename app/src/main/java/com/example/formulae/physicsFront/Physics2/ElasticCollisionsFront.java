@@ -3,6 +3,7 @@ package com.example.formulae.physicsFront.Physics2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import com.example.formulae.R;
 
 public class ElasticCollisionsFront extends AppCompatActivity {
 
