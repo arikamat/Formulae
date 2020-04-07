@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kinematics"></activity>
+        <activity android:name=".physicsFront.Physics2.kinematics"></activity>
         <activity android:name=".physicsFront.Physics2.Momentum" />
         <activity android:name=".physicsFront.Physics2.FreeFallFront" />
         <activity android:name=".physicsFront.Physics2.ForceAccelerationFront" />
