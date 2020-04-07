@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".physicsFront.Physics2.WeightFront"></activity>
+        <activity android:name=".physicsFront.Physics2.KineticEnergyFront"></activity>
+        <activity android:name=".physicsFront.Physics2.WeightFront" />
         <activity android:name=".physicsFront.Physics2.InelasticCollisionsFront" />
         <activity android:name=".physicsFront.Physics2.ElasticCollisionsFront" />
         <activity android:name=".physicsFront.Physics2.KinematicsFront" />
