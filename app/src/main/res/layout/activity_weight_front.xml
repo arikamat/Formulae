@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".physicsFront.Physics2.ForceAccelerationFront">
+    tools:context=".physicsFront.Physics2.WeightFront">
 
     <TextView
         android:id="@+id/MassText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="120dp"
         android:text="Mass (kg):"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ForceText" />
+        app:layout_constraintTop_toBottomOf="@+id/WeightText" />
 
     <TextView
         android:id="@+id/KnownVar"
@@ -30,38 +30,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/ForceText"
+        android:id="@+id/WeightText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="90dp"
-        android:text="Force (N): "
+        android:text="Weight (N): "
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/KnownVar" />
 
-    <TextView
-        android:id="@+id/AccelerationText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="75dp"
-        android:text="Acceleration(m/s^2):"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MassText" />
+
 
     <EditText
-        android:id="@+id/ForceUser"
+        android:id="@+id/WeightUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="@+id/ForceText"
+        app:layout_constraintBottom_toBottomOf="@+id/WeightText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ForceText"
-        app:layout_constraintTop_toTopOf="@+id/ForceText" />
+        app:layout_constraintStart_toEndOf="@+id/WeightText"
+        app:layout_constraintTop_toTopOf="@+id/WeightText" />
 
     <EditText
         android:id="@+id/MassUser"
@@ -77,17 +68,6 @@
         app:layout_constraintTop_toTopOf="@+id/MassText"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/AccelerationUser"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="@+id/AccelerationText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/AccelerationText"
-        app:layout_constraintTop_toTopOf="@+id/AccelerationText" />
 
     <Button
         android:id="@+id/calculateBtn"
@@ -97,8 +77,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AccelerationText" />
+        app:layout_constraintTop_toBottomOf="@+id/MassText"
+        app:layout_constraintVertical_bias="0.601" />
 
     <Button
         android:id="@+id/Again"
