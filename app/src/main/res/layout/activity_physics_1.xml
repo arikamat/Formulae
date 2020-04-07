@@ -57,7 +57,7 @@
                 android:id="@+id/forceacceleration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="       Force &amp; Acceleration" />
+                android:text="  F = MA" />
 
             <Button
                 android:id="@+id/freefall"
@@ -70,6 +70,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Momentum" />
+
+            <Button
+                android:id="@+id/elasticcollisions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Elastic Collision" />
+
+            <Button
+                android:id="@+id/inelasticcollision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inelastic Collision" />
 
             <Button
                 android:id="@+id/workenergy"
