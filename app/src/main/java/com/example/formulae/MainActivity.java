@@ -17,7 +17,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button engBtn;
     private static Displacement displacement;
     private static ConstantAcceleration constAccel;
-    private static FMA fma;
+    private FMA fma;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

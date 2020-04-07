@@ -7,8 +7,8 @@ public class FMA {
     private boolean accelerationB=false;
     private boolean massB = false;
     private boolean forceB = false;
-    public FMA(){
-    }
+
+    public FMA(){}
 
     public void setMass(double mass){
         this.mass =mass;
@@ -25,23 +25,6 @@ public class FMA {
         accelerationB=true;
     }
 
-    public double find(String find){
-        double returnedVal;
-        if(find.toLowerCase().equals("mass")){
-            returnedVal=getMass();
-            return returnedVal;
-        }
-
-        else if(find.toLowerCase().equals("force")){
-            returnedVal= getForce();
-            return returnedVal;
-        }
-
-        else{
-            returnedVal= getAcceleration();
-            return returnedVal;
-        }
-    }
 
 
     public double getAcceleration(){

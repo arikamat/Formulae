@@ -22,7 +22,7 @@ public class ForceAccelerationFront extends AppCompatActivity implements View.On
     private Button calculateBtn;
     private Button againBtn;
     private double answer;
-    private FMA fma;
+    private FMA fma = new FMA();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,43 +55,34 @@ public class ForceAccelerationFront extends AppCompatActivity implements View.On
 
     }
     public void calculateAnswer(){
-        boolean forceIsEmpty = force.getText().toString().isEmpty();
-        boolean massIsEmpty = force.getText().toString().isEmpty();
-        boolean accelerationIsEmpty = force.getText().toString().isEmpty();
+        boolean forceIsEmpty = force.getText().toString().equals("");
+        boolean massIsEmpty = mass.getText().toString().equals("");
+        boolean accelerationIsEmpty = acceleration.getText().toString().equals("");
+        double forceDouble=1.0;
+        double massDouble=1.0;
+        double accelerationDouble=1.0;
         if(!forceIsEmpty){
-            forceText=force.getText().toString();
+            forceDouble = Double.parseDouble(force.getText().toString());
+            fma.setForce(forceDouble);
         }
         if(!massIsEmpty){
-            massText = mass.getText().toString();
+            massDouble = Double.parseDouble(mass.getText().toString());
+            fma.setMass(massDouble);
         }
         if(!accelerationIsEmpty){
-            accelText = acceleration.getText().toString();
+            accelerationDouble = Double.parseDouble(acceleration.getText().toString());
+            fma.setAcceleration(accelerationDouble);
         }
-        //Set stuff in the class
-        if(forceIsEmpty){
-            fma.setMass(Double.parseDouble(massText));
-            fma.setAcceleration(Double.parseDouble(accelText));
-        }
-        if(massIsEmpty){
-            fma.setForce(Double.parseDouble(forceText));
-            fma.setAcceleration(Double.parseDouble(accelText));
-        }
-        if(accelerationIsEmpty){
-            fma.setMass(Double.parseDouble(massText));
-            fma.setForce(Double.parseDouble(forceText));
-        }
+
         //Start getting answer
         if(forceIsEmpty){
-            answer = fma.find("force");
-            force.setText(Double.toString(answer));
+            force.setText(Double.toString(fma.getForce()));
         }
         if(massIsEmpty){
-            answer = fma.find("mass");
-            mass.setText(Double.toString(answer));
+            mass.setText(Double.toString(fma.getMass()));
         }
         if(accelerationIsEmpty){
-            answer = fma.find("acceleration");
-            acceleration.setText(Double.toString(answer));
+            acceleration.setText(Double.toString(fma.getAcceleration()));
         }
 
         againBtn.setVisibility(View.VISIBLE);
