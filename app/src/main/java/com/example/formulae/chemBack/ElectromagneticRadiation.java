@@ -4,13 +4,14 @@ public class ElectromagneticRadiation {
     private double wavlen, freq, energy;
     private double mass, velocity;
     private int initLevel, finLevel;    //set finLevel to 0 if electron is removed
+    private String emissionOrAbsorbption;
     private final double C = 3.00e8;
     private final double H = 6.626e-34;
     private final double Bohr = 2.178e-18;
 
     private boolean wavelenB, freqB, energyB = false;
     private boolean massB, velocityB = false;
-    private boolean initLevelB, finLevelB = false;
+    private boolean initLevelB, finLevelB, emssionOrAbsorptionB = false;
 
     public void setWavlen (double w) {
         this.wavlen = w;
@@ -40,6 +41,10 @@ public class ElectromagneticRadiation {
         this.finLevel = finLevel;
         finLevelB = true;
     }
+    public void setEmissionOrAbsorbption (String s) {
+        this.emissionOrAbsorbption = s;
+        emssionOrAbsorptionB = true;
+    }
 
 
     public double find (String find) {
@@ -58,6 +63,14 @@ public class ElectromagneticRadiation {
         }
         else if (find.toLowerCase().equals("energy of electron")) {
             returnedVal = getEnergyOfElectron ();
+            return returnedVal;
+        }
+        else if (find.toLowerCase().equals("initial energy level")) {
+            returnedVal = getInitLevel (emissionOrAbsorbption);
+            return returnedVal;
+        }
+        else if (find.toLowerCase().equals("final energy level")) {
+            returnedVal = getFinLevel (emissionOrAbsorbption);
             return returnedVal;
         }
         else {
@@ -96,5 +109,27 @@ public class ElectromagneticRadiation {
         //positive e -> absorption of energy
         //negative e -> emission of energy
         return e;
+    }
+
+    public double getInitLevel (String s) {
+        double e;
+        //check for emission or absorption of energy
+        if (s.toLowerCase().equals("emission"))
+            e = Math.pow ((1.0 / (1.0 / (finLevel * finLevel) - energy / Bohr)), 0.5);
+        else
+            e = Math.pow ((1.0 / (1.0 / (finLevel * finLevel) + energy / Bohr)), 0.5);
+
+        return Math.round (e);
+    }
+
+    public double getFinLevel (String s) {
+        double e;
+        //check for emission or absorption
+        if (s.toLowerCase().equals("emission"))
+            e = Math.pow ((1.0 / (1.0 / (initLevel * initLevel) - energy / Bohr)), 0.5);
+        else
+            e = Math.pow ((1.0 / (1.0 / (initLevel * initLevel) + energy / Bohr)), 0.5);
+
+        return Math.round (e);
     }
 }
