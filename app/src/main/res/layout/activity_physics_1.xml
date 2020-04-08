@@ -90,12 +90,13 @@
                 android:text="Work &amp; Energy" />
 
             <Button
-                android:id="@+id/rotationalmotion"
+                android:id="@+id/weight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rotational Motion" />
+                android:text="Weight" />
 
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

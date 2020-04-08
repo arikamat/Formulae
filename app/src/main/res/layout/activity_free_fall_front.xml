@@ -18,16 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Calculate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/VFinalText"
         android:layout_width="wrap_content"
@@ -61,17 +51,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/VInitalText" />
 
-    <TextView
-        android:id="@+id/KnownVar"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/TimeUser"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Input Known Variables"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/TimeText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/TimeText"
+        app:layout_constraintTop_toTopOf="@+id/TimeText" />
 
     <TextView
         android:id="@+id/VInitalText"
@@ -83,31 +73,6 @@
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/VFinalText" />
-
-    <TextView
-    android:id="@+id/MaxHText"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="24dp"
-    android:layout_marginTop="50dp"
-    android:text="Max Height (m):"
-    android:textSize="24sp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/TimeText" />
-
-    <TextView
-        android:id="@+id/TimeMaxHText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="50dp"
-        android:text="Time to MaxH (s):"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MaxHText" />
-
-
-
 
     <EditText
         android:id="@+id/VInitalUser"
@@ -121,17 +86,16 @@
         app:layout_constraintStart_toEndOf="@+id/VInitalText"
         app:layout_constraintTop_toTopOf="@+id/VInitalText" />
 
-    <EditText
-        android:id="@+id/TimeUser"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="@+id/TimeText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/TimeText"
-        app:layout_constraintTop_toTopOf="@+id/TimeText" />
+    <TextView
+    android:id="@+id/MaxHText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="50dp"
+    android:text="Max Height (m):"
+    android:textSize="24sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/TimeText" />
 
     <EditText
         android:id="@+id/MaxHUser"
@@ -144,6 +108,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/MaxHText"
         app:layout_constraintTop_toTopOf="@+id/MaxHText" />
+
+    <TextView
+        android:id="@+id/TimeMaxHText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:text="Time to MaxH (s):"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MaxHText" />
+
 
     <EditText
         android:id="@+id/TimeMaxHUser"
