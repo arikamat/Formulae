@@ -8,7 +8,10 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.formulae.R;
+import com.example.formulae.physicsBack.Weight;
 import com.example.formulae.physicsFront.Physics2.ForceAccelerationFront;
+import com.example.formulae.physicsFront.Physics2.FreeFallFront;
+import com.example.formulae.physicsFront.Physics2.WeightFront;
 
 public class Physics1 extends AppCompatActivity implements View.OnClickListener{
     private Button forceAccl;
@@ -16,6 +19,7 @@ public class Physics1 extends AppCompatActivity implements View.OnClickListener{
     private Button momentum;
     private Button workEnergy;
     private Button rotationalMotion;
+    private Button weight;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +32,8 @@ public class Physics1 extends AppCompatActivity implements View.OnClickListener{
         momentum.setOnClickListener(this);
         workEnergy = (Button) findViewById(R.id.workenergy);
         workEnergy.setOnClickListener(this);
-        rotationalMotion = (Button) findViewById(R.id.rotationalmotion);
-        rotationalMotion.setOnClickListener(this);
+        weight = (Button) findViewById(R.id.weight);
+        weight.setOnClickListener(this);
 
 
     }
@@ -41,12 +45,16 @@ public class Physics1 extends AppCompatActivity implements View.OnClickListener{
                 startActivityForResult(intent,0);
                 break;
             case R.id.freefall:
+                Intent intent1=new Intent(getApplicationContext(), FreeFallFront.class);
+                startActivityForResult(intent1,0);
                 break;
             case R.id.momentum:
                 break;
             case R.id.workenergy:
                 break;
-            case R.id.rotationalmotion:
+            case R.id.weight:
+                Intent intent4=new Intent(getApplicationContext(), WeightFront.class);
+                startActivityForResult(intent4,0);
                 break;
         }
     }

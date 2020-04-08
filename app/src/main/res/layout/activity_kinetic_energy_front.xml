@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".physicsFront.Physics2.ForceAccelerationFront">
+    tools:context=".physicsFront.Physics2.KineticEnergyFront">
 
     <TextView
         android:id="@+id/MassText"
@@ -15,7 +15,7 @@
         android:text="Mass (kg):"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ForceText" />
+        app:layout_constraintTop_toBottomOf="@+id/kineticenergyText" />
 
     <TextView
         android:id="@+id/KnownVar"
@@ -30,38 +30,38 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/ForceText"
+        android:id="@+id/kineticenergyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="90dp"
-        android:text="Force (N): "
+        android:text="Kinetic Energy (J): "
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/KnownVar" />
 
     <TextView
-        android:id="@+id/AccelerationText"
+        android:id="@+id/velocityText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="75dp"
-        android:text="Acceleration(m/s^2):"
+        android:text="Velocity (m/s):"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MassText" />
 
     <EditText
-        android:id="@+id/ForceUser"
+        android:id="@+id/kineticenergyUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="@+id/ForceText"
+        app:layout_constraintBottom_toBottomOf="@+id/kineticenergyText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ForceText"
-        app:layout_constraintTop_toTopOf="@+id/ForceText" />
+        app:layout_constraintStart_toEndOf="@+id/kineticenergyText"
+        app:layout_constraintTop_toTopOf="@+id/kineticenergyText" />
 
     <EditText
         android:id="@+id/MassUser"
@@ -78,16 +78,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/AccelerationUser"
+        android:id="@+id/velocityUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="@+id/AccelerationText"
+        app:layout_constraintBottom_toBottomOf="@+id/velocityText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/AccelerationText"
-        app:layout_constraintTop_toTopOf="@+id/AccelerationText" />
+        app:layout_constraintStart_toEndOf="@+id/velocityText"
+        app:layout_constraintTop_toTopOf="@+id/velocityText" />
 
     <Button
         android:id="@+id/calculateBtn"
@@ -98,7 +98,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AccelerationText" />
+        app:layout_constraintTop_toBottomOf="@+id/velocityText" />
 
     <Button
         android:id="@+id/Again"
