@@ -49,9 +49,9 @@ public class KineticEnergy {
         return ((2 * kinetic) / velocity * velocity);
     }
 
-   /* public double getVelocity(){
-        return ();
-    }*/
+    public double getVelocity(){
+        return Math.pow((2*kinetic)/mass, 0.5);
+    }
 
 
 }
