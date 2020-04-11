@@ -33,6 +33,7 @@ public class KineticEnergyFront extends AppCompatActivity implements View.OnClic
         calculateBtn = (Button) findViewById(R.id.calculateBtn);
         calculateBtn.setOnClickListener(this);
         againBtn=(Button) findViewById(R.id.Again);
+        againBtn.setVisibility(View.GONE);
         againBtn.setOnClickListener(this);
     }
     @Override
@@ -40,6 +41,7 @@ public class KineticEnergyFront extends AppCompatActivity implements View.OnClic
         switch(v.getId()){
             case R.id.calculateBtn:
                 calculateAnswer();
+                againBtn.setVisibility(View.VISIBLE);
                 break;
             case R.id.Again:
                 Intent intent=new Intent(getApplicationContext(), MainActivity.class);
