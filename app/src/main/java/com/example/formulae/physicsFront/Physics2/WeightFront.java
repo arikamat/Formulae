@@ -13,7 +13,7 @@ import com.example.formulae.R;
 import com.example.formulae.physicsBack.FMA;
 
 public class WeightFront extends AppCompatActivity implements View.OnClickListener {
-    private EditText force;
+    private EditText weight;
     private EditText mass;
     private String forceText = "";
     private String massText = "";
@@ -25,7 +25,7 @@ public class WeightFront extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weight_front);
-        force = (EditText) findViewById(R.id.WeightUser);
+        weight = (EditText) findViewById(R.id.WeightUser);
 
         mass = (EditText) findViewById(R.id.MassUser);
 
@@ -52,14 +52,14 @@ public class WeightFront extends AppCompatActivity implements View.OnClickListen
 
     }
     public void calculateAnswer(){
-        boolean forceIsEmpty = force.getText().toString().equals("");
+        boolean forceIsEmpty = weight.getText().toString().equals("");
         boolean massIsEmpty = mass.getText().toString().equals("");
         double forceDouble=1.0;
         double massDouble=1.0;
         double accelerationDouble=9.81;
         fma.setAcceleration(accelerationDouble);
         if(!forceIsEmpty){
-            forceDouble = Double.parseDouble(force.getText().toString());
+            forceDouble = Double.parseDouble(weight.getText().toString());
             fma.setForce(forceDouble);
         }
         if(!massIsEmpty){
@@ -70,7 +70,7 @@ public class WeightFront extends AppCompatActivity implements View.OnClickListen
 
         //Start getting answer
         if(forceIsEmpty){
-            force.setText(Double.toString(fma.getForce()));
+            weight.setText(Double.toString(fma.getForce()));
         }
         if(massIsEmpty){
             mass.setText(Double.toString(fma.getMass()));

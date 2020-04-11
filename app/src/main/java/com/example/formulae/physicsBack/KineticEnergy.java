@@ -6,7 +6,7 @@ public class KineticEnergy {
     private boolean kineticB=false;
     private boolean massB = false;
     private boolean velocityB = false;
-
+    public KineticEnergy(){}
     public void setMass(double mass){
         this.mass =mass;
         massB = true;
