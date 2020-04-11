@@ -51,6 +51,22 @@ public class FreeFallFront extends AppCompatActivity implements View.OnClickList
     public void calculateAnswer(){
         setBools();
         setVariables();
+        freeFall.calculate();
+        if(vFinalIsEmpty){
+            vFinal.setText(Double.toString(freeFall.getFinVel()));
+        }
+        if(timeIsEmpty){
+            time.setText(Double.toString(freeFall.getTime()));
+        }
+        if(vInitIsEmpty){
+            vInit.setText(Double.toString(freeFall.getInitVel()));
+        }
+        if(maxHIsEmpty){
+            maxH.setText(Double.toString(freeFall.getMaxH()));
+        }
+        if(timeMaxIsEmpty){
+            timeMax.setText(Double.toString(freeFall.getTimeMaxH()));
+        }
 
     }
     public void setVariables(){
