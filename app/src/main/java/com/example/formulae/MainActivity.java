@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.formulae.physicsBack.ConstantAcceleration;
-import com.example.formulae.physicsBack.Displacement;
+import com.example.formulae.physicsBack.Kinematics;
 import com.example.formulae.physicsBack.FMA;
 import com.example.formulae.physicsFront.Physics1;
 
@@ -15,7 +15,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button physicsBtn;
     private Button chemistryBtn;
     private Button engBtn;
-    private static Displacement displacement;
+    private static Kinematics displacement;
     private static ConstantAcceleration constAccel;
     private FMA fma;
     @Override

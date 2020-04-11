@@ -1,6 +1,6 @@
 package com.example.formulae.physicsBack;
 
-public class Displacement {
+public class Kinematics {
     private double time, acceleration, velFinal, velInit, displacement;
 
     private boolean timeB = false;
@@ -8,7 +8,7 @@ public class Displacement {
     private boolean accelerationB=false;
     private boolean velFinalB=false;
     private boolean velInitB=false;
-    public Displacement(){ }
+    public Kinematics(){ }
     public void setTime(double time){
         this.time =time;
         timeB = true;

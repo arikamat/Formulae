@@ -41,6 +41,7 @@ public class FreeFallFront extends AppCompatActivity implements View.OnClickList
         switch(v.getId()){
             case R.id.calculateBtn:
                 calculateAnswer();
+                againBtn.setVisibility(View.VISIBLE);
                 break;
             case R.id.Again:
                 Intent intent=new Intent(getApplicationContext(), MainActivity.class);
