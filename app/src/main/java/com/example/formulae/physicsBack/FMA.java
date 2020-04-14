@@ -1,4 +1,4 @@
-package com.example.formulae.physics;
+package com.example.formulae.physicsBack;
 
 public class FMA {
     private double  acceleration, mass, force;
@@ -8,6 +8,7 @@ public class FMA {
     private boolean massB = false;
     private boolean forceB = false;
 
+    public FMA(){}
 
     public void setMass(double mass){
         this.mass =mass;
@@ -24,23 +25,6 @@ public class FMA {
         accelerationB=true;
     }
 
-    public double find(String find){
-        double returnedVal;
-        if(find.toLowerCase().equals("mass")){
-            returnedVal=getMass();
-            return returnedVal;
-        }
-
-        else if(find.toLowerCase().equals("force")){
-            returnedVal= getForce();
-            return returnedVal;
-        }
-
-        else{
-            returnedVal= getAcceleration();
-            return returnedVal;
-        }
-    }
 
 
     public double getAcceleration(){
@@ -54,7 +38,4 @@ public class FMA {
     public double getForce(){
         return (acceleration * mass);
     }
-
-
 }
-

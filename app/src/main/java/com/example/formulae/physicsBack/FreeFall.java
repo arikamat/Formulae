@@ -1,4 +1,4 @@
-package com.example.formulae.physics;
+package com.example.formulae.physicsBack;
 
 public class FreeFall {
     //Michael types hello
@@ -83,7 +83,22 @@ public class FreeFall {
             return 0;
         }
     }
-
+    public void calculate(){
+        if(timeB){
+            finVel = gravity*time;
+        }
+        if(maxHB){
+            double a = 2*gravity*maxH;
+            initVel = Math.sqrt(a);
+        }
+        if(initVelB){
+            maxH = (initVel*initVel)/(2*gravity);
+            timeMaxH = initVel/gravity;
+        }
+        if(timeMaxHB){
+            initVel = gravity*timeMaxH;
+        }
+    }
     public double getFinVel() {
         return (9.8 * time);
     }
