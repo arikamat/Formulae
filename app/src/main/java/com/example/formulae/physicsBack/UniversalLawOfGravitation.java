@@ -9,5 +9,25 @@ public class UniversalLawOfGravitation {
     private boolean distanceB = false;
     private boolean forceB = false;
 
+    public void setMass1(double mass1) {
+        this.mass1 = mass1;
+        mass1B = true;
+    }
+
+    public void setMass2(double mass2) {
+        this.mass2 = mass2;
+        mass2B = true;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+        distanceB = true;
+    }
+
+    public void setForce(double force) {
+        this.force = force;
+        forceB = true;
+    }
+
 
 }
