@@ -1,6 +1,7 @@
 package com.example.formulae.physicsBack;
 
 public class FreeFall {
+    //Michael types hello
 
     private double initVel;
     private double finVel;
