@@ -2,7 +2,7 @@ package com.example.formulae.physicsBack;
 
 public class UniversalLawOfGravitation {
     private final double g = 6.67E-11;
-    private double mass1, mass2, distance, force,
+    private double mass1, mass2, distance, force;
 
     private boolean mass1B = false;
     private boolean mass2B = false;
@@ -61,7 +61,7 @@ public class UniversalLawOfGravitation {
         } else if(find.toLowerCase().equals("mass2")){
             return getMass2();
         } else if (find.toLowerCase().equals("distance")) {
-            return getDistance()
+            return getDistance();
         } else if (find.toLowerCase().equals("force")) {
             return getForce();
         } else if (find.toLowerCase().equals("accelerationOfMass1")) {
