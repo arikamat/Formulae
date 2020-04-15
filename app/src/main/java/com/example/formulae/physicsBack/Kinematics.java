@@ -51,7 +51,7 @@ public class Kinematics {
             return returnedVal;
         }
     }
-
+        //We need to make getTime() better. returning an array is kind of pointless.
     public double[] getTime() {
         double[] answer = new double[2];
         double insideSqrt;
